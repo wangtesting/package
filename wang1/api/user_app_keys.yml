@@ -1,0 +1,13 @@
+
+name: keys
+request:
+        url: "/user/app_keys"
+        method: GET
+        verify: false
+        headers:
+            Content-Type: application/x-www-form-urlencoded
+            Authorization: $session_key
+
+validate:
+    - eq: ["status_code",200]
+#    - eq: [content.success,true]

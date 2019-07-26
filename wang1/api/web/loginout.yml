@@ -1,0 +1,11 @@
+name: 用户试玩退出
+request:
+        url: "/api/setcookie?cookie_name=token&cookie_value="
+        method: GET
+        verify: false
+
+
+
+validate:
+    - eq: ["status_code",200]
+    - eq: ["json",{'code': 0}]

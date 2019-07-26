@@ -1,0 +1,22 @@
+
+config:
+    name: "试玩流程"
+    base_url: "${get_base_url()}"
+    headers:
+        content-type: "application/json"
+    variables:
+        sdk_key: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyNSwidHlwZSI6InNka19rZXkiLCJpYXQiOjE1NTQ4ODg3OTh9.Fphxp0Qgn1A8ZosIhmbnZH78KTWpIYNU_wGKyVB7jBI"
+
+
+
+
+
+testcases:
+    试玩游戏"$ad_id"场景:
+      testcase: testcases/total.yml
+      parameters:
+          ad_id: ${P(data/play_name.csv)}
+
+
+#    web场景:
+#      testcase: testcases/web.yml

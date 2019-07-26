@@ -1,0 +1,8 @@
+name: config
+request:
+        url: "/config"
+        method: GET
+        verify: false
+
+validate:
+    - eq: ["status_code",200]

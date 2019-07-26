@@ -1,0 +1,42 @@
+- config:
+    name: "试玩流程"
+
+#    output:
+#       - session_key
+#       - token
+
+
+
+- test:
+    name: "config"
+    api: api/config.yml
+
+
+- test:
+    name: "auth"
+    api: api/user_auth.yml
+    extract:
+       - session_key: content.data.session_key
+
+
+
+- test:
+    name: "available"
+    api: api/user_available.yml
+
+- test:
+    name: "play--$ad_id"
+    api: api/user_action_play.yml
+    extract:
+       - token: content.data.token
+
+
+
+- test:
+    name: "report"
+    api: api/user_report.yml
+
+- test:
+    name: "app_keys"
+    api: api/user_app_keys.yml
+

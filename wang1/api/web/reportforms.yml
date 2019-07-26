@@ -1,0 +1,10 @@
+name: 首屏表格展示
+request:
+        url: "/api/statistic/reportforms"
+        method: GET
+        verify: false
+
+
+
+validate:
+    - eq: ["status_code",200]

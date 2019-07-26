@@ -1,0 +1,11 @@
+
+name: user_auth
+request:
+        url: "/user/auth"
+        method: POST
+        json:
+            {"sdk_key":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyNSwidHlwZSI6InNka19rZXkiLCJpYXQiOjE1NTQ4ODg3OTh9.Fphxp0Qgn1A8ZosIhmbnZH78KTWpIYNU_wGKyVB7jBI"}
+        verify: false
+validate:
+    - eq: ["status_code",200]
+#    - eq: [content.success,true]

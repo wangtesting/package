@@ -1,0 +1,44 @@
+- config:
+    name: "web用户试玩中心"
+
+    output:
+       - access_token
+#       - token
+
+
+
+- test:
+    name: "auth"
+    api: api/web/auth.yml
+    extract:
+        - access_token: content.access_token
+
+- test:
+    name: "reportforms"
+    api: api/web/reportforms.yml
+
+- test:
+    name: "finance_pricing"
+    api: api/web/finance_pricing.yml
+
+- test:
+    name: "finance_pricing_level"
+    api: api/web/finance_pricing.yml
+
+- test:
+    name: "finance_payments"
+    api: api/web/finance_payments.yml
+#
+#
+#- test:
+#    name: "app_management"
+#    api: api/web/app_management.yml
+#
+#
+#- test:
+#    name: "session_key"
+#    api: api/web/session_key.yml
+#
+#- test:
+#    name: "loginout"
+#    api: api/web/loginout.yml

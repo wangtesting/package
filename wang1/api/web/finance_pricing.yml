@@ -1,0 +1,10 @@
+name: finance-pricing
+request:
+        url: "/api/statistic/reportforms"
+        method: GET
+        verify: false
+
+
+
+validate:
+    - eq: ["status_code",200]

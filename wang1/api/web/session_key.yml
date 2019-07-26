@@ -1,0 +1,10 @@
+name: sessoion_key
+request:
+        url: "/aduser/session_key"
+        method: POST
+        verify: false
+
+
+
+validate:
+    - eq: ["status_code",200]

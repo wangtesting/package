@@ -1,0 +1,10 @@
+name: 用户试玩登录
+request:
+        url: "/aduser/auth"
+        method: POST
+        verify: false
+        json: {"email":"test@playin.tech","password":"a"}
+
+
+validate:
+    - eq: ["status_code",200]
